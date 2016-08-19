@@ -18,10 +18,9 @@ Pod::Spec.new do |s|
   s.source_files  = "RichAPM/RichAPM.framework/Versions/A/Headers/*.{h}"
   s.public_header_files = "RichAPM/RichAPM.framework/Versions/A/Headers/*.{h}"
   s.preserve_paths = "RichAPM/RichAPM.framework"
-  s.vendored_frameworks =  "RichAPM/RichAPM.framework"
-  s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
-  "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM/RichAPM.framework\"",
-  "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM.framework/**\""
+  
+  s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC"
+  
   } 
   
 
