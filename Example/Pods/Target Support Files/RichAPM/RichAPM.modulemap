@@ -1,0 +1,6 @@
+framework module RichAPM {
+  umbrella header "RichAPM-umbrella.h"
+
+  export *
+  module * { export * }
+}

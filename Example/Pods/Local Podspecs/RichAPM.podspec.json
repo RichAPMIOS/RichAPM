@@ -1,0 +1,22 @@
+{
+  "name": "RichAPM",
+  "version": "0.1.0",
+  "summary": "A short description of RichAPM.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/RichAPM",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "CHlCooker": "richapm_ios @163.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/RichAPM.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RichAPM/Classes/**/*"
+}

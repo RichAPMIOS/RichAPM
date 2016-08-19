@@ -1,42 +1,28 @@
-#
-# Be sure to run `pod lib lint RichAPM.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
-  s.name             = 'RichAPM'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of RichAPM.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/RichAPM'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'CHlCooker' => 'richapm_ios @163.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/RichAPM.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'RichAPM/Classes/**/*'
+  s.name         = "RichAPM"
+  s.version      = "1.1.1"
+  s.summary      = "A SDK used to monitor the performence of Networking and UI.And it also  catches crashInfo."
+  s.homepage     = "https://www.richapm.com"
+  s.license      = {
+    "type" => "Copyright",
+    "text" => " RichAPM.com©2015"
+  }
+  s.author             = { "RichAPMIOS" => "richapm_ios@163.com" }
+  s.platform = :ios
+  s.source       = { :http => "http://www.richapm.com/download/ios_agent/richapm_agent_ios_1.1.1.zip" }
+  s.requires_arc = true
+  s.framework = "SystemConfiguration","CoreTelephony","CoreData"
+  s.libraries = "z","stdc++"
+  s.source_files  = "Pod/RichAPM.framework/Versions/A/Headers/*.{h}"
+  s.public_header_files = "Pod/RichAPM.framework/Versions/A/Headers/*.{h}"
+  s.preserve_paths = "Pod/RichAPM.framework"
+  s.vendored_frameworks =  "Pod/RichAPM.framework"
+  s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
+  "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM/RichAPM.framework\"",
+  "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM.framework/**\""
+  } 
   
-  # s.resource_bundles = {
-  #   'RichAPM' => ['RichAPM/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-end
+ end
