@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   
   
   s.preserve_paths = "**/RichAPM.framework"
-  s.vendored_frameworks =  "Pod/RichAPM.framework"
+
   
   s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
   "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/**\"",
