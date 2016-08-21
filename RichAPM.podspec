@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   }
   s.author             = { "RichAPMIOS" => "richapm_ios@163.com" }
   s.platform = :ios,"7.0"
-  s.source       = { :http => "http://www.richapm.com/download/ios_agent/richapm_agent_ios_1.1.1.zip" }
+  s.source       = { :http => "https://github.com/RichAPMIOS/RichAPM.git" }
   s.requires_arc = true
   s.framework = "SystemConfiguration","CoreTelephony","CoreData","RichAPM"
   s.libraries = "z","stdc++"
@@ -20,7 +20,8 @@ Pod::Spec.new do |s|
   s.preserve_paths = "**/RichAPM.framework"
 
   
-  s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
+    s.vendored_frameworks =  "Pod/RichAPM.framework"
+s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
   "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/**\"",
   "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM/RichAPM.framework\"",
   } 
