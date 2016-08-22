@@ -11,15 +11,14 @@ Pod::Spec.new do |s|
   }
   s.author             = { "RichAPMIOS" => "richapm_ios@163.com" }
   s.platform = :ios,"7.0"
-  s.source       = { :http => "https://github.com/RichAPMIOS/RichAPM.git" }
+  s.source       = { :http => "https://github.com/RichAPMIOS/RichAPM.git"}
   
-  s.public_header_files = "Pod/RichAPM/**/*.h"
   s.preserve_paths = "Pod"
-  s.vendored_frameworks =  "Pod/RichAPM.framework"
+  s.ios.vendored_frameworks =  "Pod/AclipsaSDK.framework"
   s.frameworks ="SystemConfiguration","CoreTelephony","CoreData"
   s.libraries = "z","stdc++"
   s.xcconfig = {
-  "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM/RichAPM.framework\"",
+  "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM/**\"",
  
   } 
   s.requires_arc = true
