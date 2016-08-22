@@ -15,13 +15,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.framework = "SystemConfiguration","CoreTelephony","CoreData","RichAPM"
   s.libraries = "z","stdc++"
-  
-  
-  s.preserve_paths = "**/RichAPM.framework"
-
-  
-    s.vendored_frameworks =  "Pod/RichAPM.framework"
-s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
+  s.preserve_paths = "Pod/RichAPM.framework"
+  s.vendored_frameworks =  "Pod/RichAPM.framework"
+  s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC",
   "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/**\"",
   "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/RichAPM/RichAPM.framework\"",
   } 
